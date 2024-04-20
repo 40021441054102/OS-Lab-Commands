@@ -24,6 +24,7 @@ Linux is a family of open-source operating systems based on the Linux kernel. It
 * Install Linux
 * Working with Linux
 ### Linux Commands
+[ls](#1-ls) - [cd](#2-cd) - [nano](#9-nano)
 
 ---
 

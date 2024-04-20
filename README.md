@@ -24,7 +24,24 @@ Linux is a family of open-source operating systems based on the Linux kernel. It
 * Install Linux
 * Working with Linux
 ### Linux Commands
-[ls](#1-ls) - [cd](#2-cd) - [nano](#9-nano)
+* [ls](#1-ls)
+* [cd](#2-cd)
+* [Path Address Symbols](#3-linux-path-address-symbols))
+* [clear](#4-clear)
+* [exit](#5-exit)
+* [mkdir](#6-mkdir)
+* [touch](#7-touch)
+* [cat](#8-cat)
+* [nano](#9-nano)
+* [pwd](#10-pwd)
+* [rm](#11-rm)
+* [ln](#12-ln)
+* [man](#13-man)
+* [cp](#14-cp)
+* [mv](#15-mv)
+* [locate](#16-locate)
+* [history](#17-history)
+* [find](#18-find)
 
 ---
 
@@ -122,41 +139,41 @@ Removes Files or Directories
 rm my_file.txt            # Removes File
 rm -r My_Directory        # -r Option Removes Directories by Expanding each Directory Recursively and Remove Its Contents
 ```
-### 12 [ln](https://linuxcommand.org/lc3_man_pages/ln1.html)
+### 12. [ln](https://linuxcommand.org/lc3_man_pages/ln1.html)
 Creates a Link to a File
 ```ruby
 ln folder1/file.txt folder2/linked_file.txt
 ```
-### 13 [man](https://linuxcommand.org/lc3_man_pages/man1.html)
+### 13. [man](https://linuxcommand.org/lc3_man_pages/man1.html)
 Manual Page, Shows Information of Command
 ```ruby
 man ls
 man cd
 man man
 ```
-### 14 [cp](https://linuxcommand.org/lc3_man_pages/cp1.html)
+### 14. [cp](https://linuxcommand.org/lc3_man_pages/cp1.html)
 Copies File or Directory
 ```ruby
 cp index.html ~/Desktop    # Copy File
 cp -r Directory/ ~/Desktop # -r Option Copy Directories by Expanding each Directory Recursively and Copy Its Contents
 ```
-### [mv](https://linuxcommand.org/lc3_man_pages/mv1.html)
+### 15. [mv](https://linuxcommand.org/lc3_man_pages/mv1.html)
 Moves File or Directory
 ```ruby
 mv index.html ~/Desktop    # Moves File
 mv Directory ~/Desktop     # Moves Directory, -r Option is Not Needed
 ```
-### [locate](https://linuxcommand.org/lc3_man_pages/locate1.html)
+### 16. [locate](https://linuxcommand.org/lc3_man_pages/locate1.html)
 Find Files by Name, While Booting Up Your OS, All Your Hard Drive is being Loaded and All File Paths is being Writing to Linux Database of Paths and ```locate``` Will Find Inside this Database to Find File. So, Every Files That is Created After Booting Up is Not Detectable by Locate Unless You Update Your File Paths Database
 ```ruby
 locate my_file.txt
 ```
-### [history](https://linuxcommand.org/lc3_man_pages/historyh.html)
+### 17. [history](https://linuxcommand.org/lc3_man_pages/historyh.html)
 Displays History of Commands You have Entered
 ```ruby
 history
 ```
-### [find]()
+### 18. [find](https://linuxcommand.org/lc3_man_pages/find1.html)
 Searchs for Files and Directory
 ```ruby
 find . -name 'index.html'     # -name Option is Needed to Find File or Directory by Name

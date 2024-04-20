@@ -154,13 +154,13 @@ man man
 ### 14. [cp](https://linuxcommand.org/lc3_man_pages/cp1.html)
 Copies File or Directory
 ```ruby
-cp index.html ~/Desktop    # Copy File
+cp index.html ~/Desktop    # Copy index.html File to Desktop
 cp -r Directory/ ~/Desktop # -r Option Copy Directories by Expanding each Directory Recursively and Copy Its Contents
 ```
 ### 15. [mv](https://linuxcommand.org/lc3_man_pages/mv1.html)
 Moves File or Directory
 ```ruby
-mv index.html ~/Desktop    # Moves File
+mv index.html ~/Desktop    # Moves index.html File to Desktop
 mv Directory ~/Desktop     # Moves Directory, -r Option is Not Needed
 ```
 ### 16. [locate](https://linuxcommand.org/lc3_man_pages/locate1.html)

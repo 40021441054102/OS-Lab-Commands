@@ -70,8 +70,8 @@ Change Directory
 ```ruby
 cd folder_name              # Go to any Folder You Want
 cd Downloads                # Go to Download Directory of Linux if It is Available in Where You are Now At
-cd ~/Desktop                # Go to Download Directory of Linux from Wherever You are
-cd /home/user/Desktop       # Go to Download Directory of Linux from Root Path
+cd ~/Downloads              # Go to Download Directory of Linux from Wherever You are
+cd /home/user/Downloads     # Go to Download Directory of Linux from Root Path
 cd ..                       # Go to Previous Folder
 cd .                        # Go to Working Directory, Not Useful for cd Command
 ```

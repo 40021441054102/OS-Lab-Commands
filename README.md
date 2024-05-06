@@ -3,7 +3,7 @@ This Repository Contains a Collection of Linux Commands Taught in each OS Lab Cl
 
 Table of Contents
 * [Week 1 to 6](#week-1-to-6)
-* Week 7 (Not Added Yet)
+* [Weel 7](#week-7)
 * Week 8 (Not Added Yet)
 * Week 9 (Not Added Yet)
 * Week 10 (Not Added Yet)
@@ -179,3 +179,5 @@ Searchs for Files and Directory
 find . -name 'index.html'     # -name Option is Needed to Find File or Directory by Name
 ```
 Remember that You Can Use any Other Path Instead of Using ```.``` Working Directory
+
+## Week 7

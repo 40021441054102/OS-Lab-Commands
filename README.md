@@ -3,7 +3,7 @@ This Repository Contains a Collection of Linux Commands Taught in each OS Lab Cl
 
 Table of Contents
 * [Week 1 to 6](#week-1-to-6)
-* [Weel 7](#week-7)
+* [Week 7](#week-7)
 * Week 8 (Not Added Yet)
 * Week 9 (Not Added Yet)
 * Week 10 (Not Added Yet)
@@ -181,3 +181,25 @@ find . -name 'index.html'     # -name Option is Needed to Find File or Directory
 Remember that You Can Use any Other Path Instead of Using ```.``` Working Directory
 
 ## Week 7
+### What is Shell ?
+Shell is a ```command-line interface (CLI)``` that allows users to interact with the computer system by entering commands. Shell is gateway to the operating system's services and functions. in Unix-based operating systems like Linux, MacOS and ... there are several popular shells :
+* [Bash](https://www.gnu.org/software/bash/) - Linux, MacOS
+* [zsh](https://www.zsh.org/) - Linux, MacOS
+* [Power Shell](https://learn.microsoft.com/en-us/powershell/) - Windows
+
+### What is Bash ?
+Bash (Bourne Again Shell) is a popular ```command-line interpreter``` or shell for Unix and Unix-like operating systems. It's the ```default``` shell for most Linux distributions and macOS.
+
+### What is Terminal ?
+Terminal is a software interface that allows users to interact with a computer system using text-based commands ```(I/O)```. It provides a way to enter shell commands to the operating system and receive textual output.
+
+### What is Shell Script
+Shell Script is a ```script or program``` written in a scripting language that is interpreted by a shell, such as ```Bash``` in Unix-like operating systems. Shell scripts are used to ```automate tasks```, ```execute commands```, and perform ```system administration tasks```.
+
+### Why ```Everything in Linux is File``` ?
+The principle that "everything is a file" is a fundamental concept in Unix-like operating systems, including Linux. It embodies the idea that in the Unix/Linux environment, various system resources are represented as files or file-like objects. This simplifies the design and usage of the operating system, as it allows uniform access and manipulation of different resources through a common interface.
+for example :
+* Your computer's webcam is a file (located at ```/dev/video0```)
+* Your mouse and keyboard (located at ```/dev/input/by-id/```)
+* Your ls command (located at ```/usr/bin/ls```)
+* Your SSD (located at ```/dev/disk/by-id```)

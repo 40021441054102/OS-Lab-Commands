@@ -323,12 +323,13 @@ name="Lida"
 age=22
 major="computer engineering"
 ```
-⚠️ You can define your variables everywhere that use bash, like your ```terminal``` or ```shell script``` file
+⚠️ You can define your variables everywhere that use bash, like your ```terminal``` or ```shell script``` file  
 ⚠️ In shell scripting, variable assignments ```shouldn't have spaces``` around the = sign :
 ```bash
 age = 22    # - Will error
 age=22      # - Will assign 22 to age
 ```
+
 ⚠️ Variable names in Linux are case-sensitive and can consist of letters, numbers, and underscores. By convention, variable names are usually in uppercase, especially for environment variables, to distinguish them from other variables and constants :
 ```bash
 age=22

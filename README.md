@@ -4,7 +4,7 @@ This Repository Contains a Collection of Linux Commands Taught in each OS Lab Cl
 Table of Contents
 * [Week 1 to 6](#week-1-to-6)
 * [Week 7](#week-7)
-* Week 8 (Not Added Yet)
+* [Week 8](#week-8)
 * Week 9 (Not Added Yet)
 * Week 10 (Not Added Yet)
 * Week 11 (Not Added Yet)
@@ -251,7 +251,7 @@ Now you can see execute permission ```x``` has been added to file and it can be 
 ./my_script.sh
 ```
 that ```./``` at first shows current directory ```.``` explained in [this part](#3-linux-path-addres-symbols). It can be other path if you are not inside my_script.sh's directory like :
-```sh
+```bash
 # home path
 ~/Desktop/my_script.sh
 # or full path (needed in systemd services projects)
@@ -259,3 +259,54 @@ that ```./``` at first shows current directory ```.``` explained in [this part](
 ```
 
 ### Why i can not use ```my_script.sh``` to run my script instead of ```./my_script.sh```
+When you try to run a script using my_script.sh instead of ./my_script.sh, your shell looks for the script in the directories listed in your ```PATH environment variable```. If the ```current directory (.)``` is not in your PATH, the shell ```won't find the script```.
+
+### Linux Commands
+*[echo](#19-echo)
+* [grep](#20-grep)
+
+### 19. [echo](https://www.geeksforgeeks.org/echo-command-in-linux-with-examples/)
+The echo command is a basic command-line utility in Unix and Unix-like operating systems that prints the specified arguments to the standard output. It is commonly used to display text or variables in shell scripts or interactively in a terminal session :
+```bash
+echo "Hello, world!"
+```
+
+### 20. [grep](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+The grep command is a powerful tool used in Linux and Unix-like operating systems for searching ```text patterns``` within files or ```streams of input```.  
+Examples :
+1. Search text or pattern (here hello) in file
+```bash
+grep "hello world" file.txt
+```
+Common Options :
+* -i: Ignore case distinctions.
+```bash
+grep -i "hELlO WOrlD" file.txt
+```
+* -r, -R: Recursively search subdirectories listed.
+```bash
+grep -r "hello world" directory/
+```
+* -n: Display line numbers along with matched lines.
+```bash
+grep -n "hello world" file.txt
+```
+* -v: Invert the match, i.e., display non-matching lines.
+```bash
+grep -v "bye world" file.txt
+```
+* -c: Only count the number of matching lines. (Here shows amount of your cpu cores)
+```bash
+grep -c "processor" /proc/cpuinfo
+```
+* -E: Interpret the pattern as an extended regular expression (ERE). (Here will shows lines that are mails and their extention is @gmail.com)
+```bash
+grep -E '\b[A-Za-z0-9._%+-]+@gmail\.com\b' emails.txt
+
+# \b: Matches a word boundary, ensuring that the pattern matches complete email addresses and not partial ones.
+# [A-Za-z0-9._%+-]+: Matches one or more characters that can appear in the local part of an email address. This includes letters (upper and lower case), digits, and special characters commonly allowed in email addresses.
+# @gmail\.com: Matches the domain part of a Gmail address.
+# \b: Matches another word boundary, ensuring that the pattern matches complete email addresses and not partial ones.
+```
+
+## Week 8

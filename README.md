@@ -373,6 +373,7 @@ echo "$num1 + $num2 = $((num1 + num2))"
 The curly braces ```{}``` are used to clearly delimit the variable name from surrounding text. For instance :
 ```bash
 name="Zhila"
+echo "her university mail address is $name@gmail.com"
 ```
 Without the braces, Bash might not interpret the variable correctly if it is followed by characters that are part of the variable name. Compare :
 ```bash

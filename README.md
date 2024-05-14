@@ -250,7 +250,7 @@ Now you can see execute permission ```x``` has been added to file and it can be 
 ```sh
 ./my_script.sh
 ```
-that ```./``` at first shows current directory ```.``` explained in [this part](#3-linux-path-address-symbols). It can be other path if you are not inside my_script.sh's directory like :
+that ```./``` at first shows current directory ```.``` explained in [this part](#3-linux-path-addres-symbols). It can be other path if you are not inside my_script.sh's directory like :
 ```sh
 # home path
 ~/Desktop/my_script.sh

@@ -203,3 +203,59 @@ for example :
 * Your mouse and keyboard (located at ```/dev/input/by-id/```)
 * Your ls command (located at ```/usr/bin/ls```)
 * Your SSD (located at ```/dev/disk/by-id```)
+
+### How to Write Shell Script ?
+1. Open your terminal and create a new file like ```touch my_script.sh```. You can name it whatever you like, but make sure it has a ```.sh``` extension to indicate it's a ```shell script```.
+2. Use any text editor you are comfortable with, for example use nano
+3. The ```first line``` of your script should be the ```shebang line```. This tells the system which ```interpreter``` to use to run the script. For a ```Bash``` shell script, use :
+```bash
+#!/bin/bash
+```
+4. Add the commands you want to execute. Here’s an example script that create new file named file.txt and directory named copy_here and then copy file.txt to copy_here directory :
+```bash
+#!/bin/bash
+
+touch file.txt
+mkdir copy_here
+cp file.txt copy_here
+```
+5. save your file
+Now you have created a shell script.
+
+
+### How to Run (Execute) Shell Script ?
+Before you can run the script, you need to make it executable. Use the chmod command to do this :
+```sh
+chmod +x my_script.sh
+```
+but what is ```chmod``` and ```+x``` ?  
+In Unix-like operating systems (like Linux), every file and directory has a set of permissions that determine who can read, write, or execute the file  
+There are three types of permissions:
+* Read (r): Permission to read the file.
+* Write (w): Permission to modify the file.
+* Execute (x): Permission to run the file as a program.
+for example if you do command ```ls -l``` that shows lsit of file as detailed list, you see this line for ```my_script.sh``` :
+```sh
+ls -l
+
+-rw-rw-r-- 1 qb qb 0 May 14 08:30 my_script.sh
+```
+First part ```-rw-rw-r--```'s 3-charactered section ```rw-``` only has ```r``` and ```w```, it means my_script.sh can be writen or read but not execute because execute part is ```-```. to add execute permission you must do that ```chmod +x my_script.sh``` command, if you that you will see this instead :
+```sh
+ls -l
+
+-rwxrwxr-x 1 qb qb 0 May 14 08:30 my_script.sh
+```
+Now you can see execute permission ```x``` has been added to file and it can be seen like ```rwx``` instead ```rw-```, that means my_script.sh can be run in terminal like this :
+```sh
+./my_script.sh
+```
+that ```./``` at first shows current directory ```.``` explained in [this part](#3-linux-path-address-symbols). It can be other path if you are not inside my_script.sh's directory like :
+```sh
+# home path
+~/Desktop/my_script.sh
+# or full path (needed in systemd services projects)
+/home/qb/Desktop/my_script.sh
+```
+
+### Why i can not use ```my_script.sh``` to run my script instead of ```./my_script.sh```

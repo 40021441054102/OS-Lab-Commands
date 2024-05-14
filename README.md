@@ -533,7 +533,7 @@ if [ $str = "hello world" ]; then
 # - Correct
 if [ "$str" = "hello world" ]; then
 ```
-* Semicolon ```;``` at the end of condition brackets
+* Semicolon ```;``` at the end of condition brackets  
 Remember to use ```;``` at close bracket like ```[ condition ]; then```
 
 <!--

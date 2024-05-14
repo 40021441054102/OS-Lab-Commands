@@ -310,3 +310,7 @@ grep -E '\b[A-Za-z0-9._%+-]+@gmail\.com\b' emails.txt
 ```
 
 ## Week 8
+Review learned lessons and do some class exercises
+
+## Week 9
+### Variables

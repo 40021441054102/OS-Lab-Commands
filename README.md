@@ -688,10 +688,83 @@ done
 ```bash
 #! /bin/bash
 
-#! arr=("apple" "banana" "cherry")
+arr=("apple" "banana" "cherry")
 for fruit in "${arr[@]}"
 do
     echo "I like $fruit"
 done
 ```
 
+## Week 11
+### Nested ```for``` Loops
+We want to multiply 2 numbers from 1 x 1 up to 4 x 4, so we need two ```for``` loops, one to iterate first number, second to iterate second number :
+```bash
+#! /bin/bash
+
+echo -n "number 1 : "; read rows
+echo -n "number 2 : "; read cols
+
+for ((i = 1; i <= rows; i++)); do
+    for ((j = 1; j <= cols; j++)); do
+       echo -e "i * j = $i * $j = $((i * j))"
+    done
+    echo "------------"
+done
+```
+
+### ```while``` Loops
+```while``` loop allows you to execute a block of code repeatedly as long as a specified condition is true. This is useful for automating repetitive tasks.   
+#### Basic Syntax
+
+The basic syntax of a while loop in a shell script is as follows :
+```bash
+while [ condition ]
+do
+    commands
+done
+```
+⚠️ The condition is usually enclosed in square brackets ```[ ]```.
+#### Example ( Simple )
+
+```bash
+#!/bin/bash
+
+count=1
+
+while [ $count -le 5 ]
+do
+    echo "Count: $count"
+    ((count++))
+done
+```
+#### Example ( Infinite Loop )
+
+```bash
+#!/bin/bash
+
+while true
+do
+    echo "This is an infinite loop. Press [CTRL+C] to stop."
+    sleep 1
+done
+```
+
+### Nested ```while``` Loop
+Like that multiple shell script with ```for``` loop, We can use while loops instead :
+```bash
+#!/bin/bash
+
+echo -n "number 1 : "; read rows
+echo -n "number 2 : "; read cols
+
+i=1
+while [ $i -le $rows ]; do
+    j=1
+    while [ $j -le $cols ]; do
+        echo -e "i * j = $i * $j = $((i * j))"
+        ((j++))
+    done
+    echo "------------"
+    ((i++))
+done
+```

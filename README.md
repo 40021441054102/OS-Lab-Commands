@@ -6,7 +6,7 @@ Table of Contents
 * [Week 7](#week-7)
 * [Week 8](#week-8)
 * [Week 9](#week-9)
-* Week 10 (Not Added Yet)
+* [Week 10](#week-10)
 * Week 11 (Not Added Yet)
 ...
   
@@ -536,6 +536,9 @@ if [ "$str" = "hello world" ]; then
 ```
 * Semicolon ```;``` at the end of condition brackets  
 Remember to use ```;``` at close bracket like ```[ condition ]; then```
+
+## Week 10
+### Special Variables
 
 <!--
 ## Week 10

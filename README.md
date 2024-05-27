@@ -539,26 +539,159 @@ Remember to use ```;``` at close bracket like ```[ condition ]; then```
 
 ## Week 10
 ### Special Variables
+In Linux, ```special variables``` are used in scripts to handle parameters passed to the script. Here are some of the most commonly used special variables:
+* #### Positional Parameters
+   * ```$0``` Shell Name : This variable contains the name of the script
+   * ```$1, $2, ...``` Shell Parameters : These variables represent the positional parameters passed to the script. ```$1``` is the ```first``` argument, ```$2``` is the ```second``` argument, and so on.
 
-<!--
-## Week 10
-### Special Variables
-Linux also has special variables like $0 (the name of the script), $1, $2, etc. (for script arguments), and $? (the exit status of the last command).
+      #### Example
+      ```bash
+      #! /bin/bash
+      echo "shell parameters are : $1 $2"
+      echo "shell name is : $0"
+      ```
+      if you execute this shell with :
+      ```bash
+      ./test.sh 123 abc
+      ```
+      It will output :
+      ```bash
+      shell parameters are 123 abc
+      shell name is ./test.sh
+      ```
+* #### Special Parameters
+   * ```$#``` Number of Parameters : This variable holds the number of positional parameters passed to the script.
+   * ```$@``` List of All Parameters : This variable holds the number of positional parameters passed to the script.
+   * ```$?``` Execute Status : This variable contains the exit status of the last command executed. A status of 0 usually means success, while any non-zero value indicates an error.
 
-### Variable Scope
-Variables in shell scripts have scope, meaning they are only accessible within the script or the shell session in which they are defined unless they are exported.
+      #### Example
+      ```bash
+      #! /bin/bash
+      echo "amount of shell parameters is : $#"
+      echo "passed parameters are : $@"
+      ls
+      # - Check Status of ls Command
+      if [ $? -eq 0 ]; then
+          echo "Success"
+      else
+          echo "Failed"
+      fi
+      ```
+      if you execute this shell with :
+      ```bash
+      ./test.sh p1 p2 p3 p4 p5
+      ```
+      It will output :
+      ```bash
+      amount of shell parameters is : 5
+      passed parameters are : p1 p2 p3 p4 p5
+      test.sh # - Output of ls Command
+      Success
+      ```
 
-### types of variable (user-defined and environment)
-Environment Variables: These are variables that are available system-wide and can be accessed by all processes. They are usually set in configuration files like .bashrc, .bash_profile, or in scripts. Common environment variables include PATH, HOME, USER, etc.
+### Giving Input(s) to Script
+Giving input to a shell script can be done in several ways, depending on the requirements of the script :
+* #### Command-line Arguments   
+  Like [this part](#special-variables)
+* #### Reading Inputs During Execution
+  You can prompt the user for input during the execution of the script using the ```read``` command :
+  #### Example
+  ```bash
+  #! /bin/bash
+  echo "Enter your name:"
+  read name
+  echo "Hello, $name"
+  ```
 
-User-defined Variables: These are variables created by users within shell scripts or directly in the shell environment. They can be used to store temporary data or configuration values.
+### Types of Variable (User Defined | Environment)
+There are mainly two types of variables you will encounter in a Linux environment :
+* #### User Defined Variable
+  Like [this part](#variables)
+* #### Environment Variable
+  Environment Variables are ```predefined variables``` in Linux that affect the behavior of the shell and user processes. They are used to ```store system-wide values``` that need to be accessed by ```multiple``` applications and processes :
+  * Typically defined in shell initialization files like ```.bashrc```, ```.bash_profile```, or ```/etc/environment```.
+  * Accessible to all child processes spawned from the shell.
+  * Often used to configure ```system settings```, paths, and behavior of system applications.
+  #### Common Environment Variables
+  * PATH: Specifies directories where executable programs are located.
+  * HOME: The home directory of the current user.
+  * USER: The username of the current user.
+  * SHELL: The path to the current user's shell.
+  #### Define Environment Variable
+  in order to define environment variable you must use ```export``` command :
 
+  ```bash
+  # - Define a new environment variable
+  export MY_ENV_VAR="This is an environment variable"
+  
+  echo $MY_ENV_VAR
+  ```
+  #### Listing Environment Variables
+  in order to see environment variables you can use ```env``` or ```printenv``` commands :
 
-### What is Process Environment ?
+  ```bash
+  printenv
+  # - Or
+  env
+  ```
+### ```for``` Loop
+For loops in shell scripts are used to iterate over a series of items, such as a list of words, a range of numbers, or the contents of a file. They are a fundamental part of shell scripting, allowing you to automate repetitive tasks efficiently.   
+#### Basic Syntax
 
-### Exporting Variables
+The basic syntax of a for loop in a shell script is as follows :
+```bash
+for variable in list do
+    commands
+done
+```
+#### Example ( Iterate Over List of Words ):
 
-### for, while
+```bash
+#! /bin/bash
 
+for fruit in apple banana cherry
+do
+    echo "I like $fruit"
+done
+```
+#### Example ( Iterate Over Range of Numbers )
 
--->
+```bash
+for i in {1..5}
+do
+    echo "Number $i"
+done
+```
+#### Example ( Using C-Style Syntax )
+
+```bash
+#! /bin/bash
+
+for (( i=1; i<=5; i++ ))
+do
+    echo "Number $i"
+done
+```
+#### Example ( Iterating Over Files in a Directory )
+
+```bash
+#! /bin/bash
+
+for file in /path/to/directory/*
+do
+    echo "Processing $file"
+    # Do something with $file
+done
+```
+#### Example ( Using Arrays )
+
+```bash
+#! /bin/bash
+
+#! arr=("apple" "banana" "cherry")
+for fruit in "${arr[@]}"
+do
+    echo "I like $fruit"
+done
+```
+

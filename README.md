@@ -7,7 +7,7 @@ Table of Contents
 * [Week 8](#week-8)
 * [Week 9](#week-9)
 * [Week 10](#week-10)
-* Week 11 (Not Added Yet)
+* [Week 11](#week-11)
 ...
   
 ## Week 1 to 6

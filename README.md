@@ -75,7 +75,7 @@ cd /home/user/Downloads     # Go to Download Directory of Linux from Root Path
 cd ..                       # Go to Previous Folder
 cd .                        # Go to Working Directory, Not Useful for cd Command
 ```
-### 3. Linux Path Addres Symbols
+### 3. Linux Path Address Symbols
 
 ```/``` Root Directory, All Paths Start from This Directory Like ```/proc/cpuinfo``` is Where Your Cpu Information is 
 
